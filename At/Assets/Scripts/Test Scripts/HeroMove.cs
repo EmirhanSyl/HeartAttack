@@ -7,18 +7,23 @@ public class HeroMove : MonoBehaviour
     public float health = 100f;
     public float lastHealth;
     public float speed = 5f;
+    public float jumpForce = 50f;
 
     bool stopMovement;
+    bool jump;
 
     Rigidbody2D rigHero;
     Animator animHero;
     SpriteRenderer srHero;
+    GroundCheck checker;
+    public GameObject CheckObject;
 
     void Start()
     {
         rigHero = GetComponent<Rigidbody2D>();
         animHero = GetComponent<Animator>();
         srHero = GetComponent<SpriteRenderer>();
+        checker = CheckObject.GetComponent<GroundCheck>();
 
         lastHealth = health;
     }
@@ -35,9 +40,7 @@ public class HeroMove : MonoBehaviour
     {
         if (lastHealth != health)
         {
-            animHero.SetTrigger("Hit");
             lastHealth = health;
-
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -45,7 +48,6 @@ public class HeroMove : MonoBehaviour
         }
         if (health <= 0)
         {
-            animHero.SetTrigger("Dead");
             Destroy(gameObject, 2);
         }
 
@@ -68,10 +70,11 @@ public class HeroMove : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.W) && )
+        if (Input.GetKey(KeyCode.W) && checker.isGrounded)
         {
+            rigHero.AddForce(new Vector2(0, jumpForce * Time.deltaTime));
+            jump = true;
             animHero.SetBool("Jump", true);
-            stopMovement = true;
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -82,17 +85,6 @@ public class HeroMove : MonoBehaviour
         else
         {
             animHero.SetBool("Jump", false);
-        }
-
-
-
-        if (animHero.GetBool("ShieldUp"))
-        {
-            stopMovement = true;
-        }
-        else
-        {
-            stopMovement = false;
         }
 
     }
