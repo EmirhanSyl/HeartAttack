@@ -16,7 +16,9 @@ public class HeroMove : MonoBehaviour
     Animator animHero;
     SpriteRenderer srHero;
     GroundCheck checker;
+
     public GameObject CheckObject;
+    public GameObject hitDetecterObject;
 
     void Start()
     {
@@ -32,7 +34,7 @@ public class HeroMove : MonoBehaviour
     {
         if (!stopMovement)
         {
-            rigHero.velocity = new Vector2(speed * Input.GetAxis("Horizontal"), 0f);
+            rigHero.velocity = new Vector2(speed * Input.GetAxis("Horizontal"), rigHero.velocity.y);
         }
     }
     
@@ -72,13 +74,13 @@ public class HeroMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && checker.isGrounded)
         {
-            rigHero.AddForce(new Vector2(0, jumpForce * Time.deltaTime));
+            rigHero.velocity = new Vector2(rigHero.velocity.x, jumpForce);
             jump = true;
             animHero.SetBool("Jump", true);
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            Attack();
+            StartCoroutine(Attack());
             animHero.SetTrigger("Attack");
             animHero.SetBool("Jump", false);
         }
@@ -89,9 +91,25 @@ public class HeroMove : MonoBehaviour
 
     }
 
-    void Attack()
+    IEnumerator Attack()
     {
+        if(animHero.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
 
+        }
+        hitDetecterObject.SetActive(true);
+
+        if (srHero.flipX)
+        {
+            hitDetecterObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            hitDetecterObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        hitDetecterObject.SetActive(false);
     }
 
 }
