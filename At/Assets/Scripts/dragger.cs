@@ -19,6 +19,7 @@ public class dragger : MonoBehaviour
     bool halfKalp;
     bool noneKalp;
     public bool kalpFree;
+    public bool alive;
 
 
     private void Start()
@@ -48,7 +49,7 @@ public class dragger : MonoBehaviour
             gameObject.GetComponent<Animator>().SetTrigger("Alive");
             gameObject.GetComponent<Animator>().SetBool("inHand", true);
             kalpFree = false;
-            
+            alive = true;
             //hero.GetComponent<HeroMove>().health -= 1;
         }
 

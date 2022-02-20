@@ -20,6 +20,16 @@ public class HeroMove : MonoBehaviour
     public GameObject CheckObject;
     public GameObject hitDetecterObject;
 
+    [Header("HealthChangeState")]
+    public GameObject fullKalp;
+    public GameObject halfKalp;
+    public GameObject noneKalp;
+
+    public Transform kalpHolder1;
+    public Transform kalpHolder2;
+    public Transform kalpHolder3;
+
+
     void Start()
     {
         rigHero = GetComponent<Rigidbody2D>();
@@ -42,6 +52,7 @@ public class HeroMove : MonoBehaviour
     {
         if (lastHealth != health)
         {
+            ChangeHealthState();
             lastHealth = health;
         }
         if (health <= 0)
@@ -106,6 +117,199 @@ public class HeroMove : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         hitDetecterObject.SetActive(false);
+    }
+
+    void ChangeHealthState()
+    {
+        switch(health)
+        {
+            case 6:
+                
+                break;
+            case 5:
+
+                if(!kalpHolder3.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart00 = Instantiate(halfKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart00.transform.parent = kalpHolder3;
+                }
+                else if(!kalpHolder2.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(fullKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart01 = Instantiate(halfKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart01.transform.parent = kalpHolder3;
+                }
+                else if (!kalpHolder1.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart03 = Instantiate(fullKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart03.transform.parent = kalpHolder1;
+
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart01 = Instantiate(halfKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart01.transform.parent = kalpHolder3;
+                }
+                else
+                {
+                    var newHeart = Instantiate(halfKalp, kalpHolder3.GetChild(0).position, kalpHolder3.GetChild(0).rotation);
+                    newHeart.transform.parent = kalpHolder3;
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                }                
+                break;
+
+
+            case 4:
+                if (!kalpHolder3.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart00 = Instantiate(noneKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart00.transform.parent = kalpHolder3;
+                }
+                else if (!kalpHolder2.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(fullKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart01 = Instantiate(noneKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart01.transform.parent = kalpHolder3;
+                }
+                else if (!kalpHolder1.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart03 = Instantiate(fullKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart03.transform.parent = kalpHolder1;
+
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart01 = Instantiate(noneKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart01.transform.parent = kalpHolder3;
+                }
+                else
+                {
+                    var newHeart = Instantiate(noneKalp, kalpHolder3.GetChild(0).position, kalpHolder3.GetChild(0).rotation);
+                    newHeart.transform.parent = kalpHolder3;
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                }
+                break;
+
+
+            case 3:
+                if (!kalpHolder3.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart00 = Instantiate(noneKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart00.transform.parent = kalpHolder3;
+
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(halfKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+                }
+                else if (!kalpHolder2.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(halfKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+                }
+                else if (!kalpHolder1.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart03 = Instantiate(fullKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart03.transform.parent = kalpHolder1;
+
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart01 = Instantiate(halfKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart01.transform.parent = kalpHolder2;
+                }
+                else
+                {
+                    var newHeart = Instantiate(noneKalp, kalpHolder2.GetChild(0).position, kalpHolder2.GetChild(0).rotation);
+                    newHeart.transform.parent = kalpHolder2;
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                }
+                break;
+
+
+            case 2:
+                if (!kalpHolder3.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart00 = Instantiate(noneKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart00.transform.parent = kalpHolder3;
+
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(noneKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+                }
+                else if (!kalpHolder2.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(noneKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+                }
+                else if (!kalpHolder1.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart03 = Instantiate(fullKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart03.transform.parent = kalpHolder1;
+
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart01 = Instantiate(noneKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart01.transform.parent = kalpHolder2;
+                }
+                else
+                {
+                    var newHeart = Instantiate(noneKalp, kalpHolder2.GetChild(0).position, kalpHolder2.GetChild(0).rotation);
+                    newHeart.transform.parent = kalpHolder2;
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                }
+                break;
+
+
+            case 1:
+                if (!kalpHolder3.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder3.GetChild(0).gameObject);
+                    var newHeart00 = Instantiate(noneKalp, kalpHolder3.position, kalpHolder3.rotation);
+                    newHeart00.transform.parent = kalpHolder3;
+
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(halfKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart02.transform.parent = kalpHolder1;
+                }
+                else if (!kalpHolder2.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder2.GetChild(0).gameObject);
+                    var newHeart02 = Instantiate(noneKalp, kalpHolder2.position, kalpHolder2.rotation);
+                    newHeart02.transform.parent = kalpHolder2;
+
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart03 = Instantiate(halfKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart03.transform.parent = kalpHolder1;
+                }
+                else if (!kalpHolder1.GetChild(0).gameObject.activeSelf)
+                {
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                    var newHeart03 = Instantiate(noneKalp, kalpHolder1.position, kalpHolder1.rotation);
+                    newHeart03.transform.parent = kalpHolder1;
+                }
+                else
+                {
+                    var newHeart = Instantiate(halfKalp, kalpHolder1.GetChild(0).position, kalpHolder1.GetChild(0).rotation);
+                    newHeart.transform.parent = kalpHolder1;
+                    Destroy(kalpHolder1.GetChild(0).gameObject);
+                }
+                break;
+            case 0:
+                //animHero.SetTrigger("Dead");
+                Destroy(gameObject, 2f);
+                break;
+        }
     }
 
 }
