@@ -15,6 +15,7 @@ public class heartMove : MonoBehaviour
     bool crash;
     float time;
     float lastSpeed;
+    int multiply = 0;
 
     public float xForce = 20;
     public float yForce = 200;
@@ -85,8 +86,7 @@ public class heartMove : MonoBehaviour
     }
 
     IEnumerator jump()
-    {
-        int multiply = 0;
+    {        
         if(multiply == 0 || multiply == 2)
         {
             multiply = Random.Range(-1, 2);
