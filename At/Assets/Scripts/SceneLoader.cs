@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-
+    // Burasý Cheat Code için. Build etmeden SÝL!
     void Update()
     {
         RespondToDebugKeys();
     }
 
-
+    // Burasý Cheat Code için. Build etmeden SÝL!
     void RespondToDebugKeys()
     {
         if (Input.GetKeyDown(KeyCode.L))
