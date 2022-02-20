@@ -48,7 +48,7 @@ public class dragger : MonoBehaviour
             gameObject.GetComponent<Animator>().SetTrigger("Alive");
             gameObject.GetComponent<Animator>().SetBool("inHand", true);
             kalpFree = false;
-
+            
             //hero.GetComponent<HeroMove>().health -= 1;
         }
 
