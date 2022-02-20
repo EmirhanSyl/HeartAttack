@@ -53,6 +53,9 @@ TagManager:
   - name: Throwable
     uniqueID: 3812864421
     locked: 0
+  - name: "Kap\u0131"
+    uniqueID: 2872653023
+    locked: 0
   - name: Player
     uniqueID: 291265355
     locked: 0
