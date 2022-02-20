@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeroMove : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 6;
     public float lastHealth;
     public float speed = 5f;
     public float jumpForce = 50f;
@@ -43,10 +43,6 @@ public class HeroMove : MonoBehaviour
         if (lastHealth != health)
         {
             lastHealth = health;
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            health -= 5;
         }
         if (health <= 0)
         {
