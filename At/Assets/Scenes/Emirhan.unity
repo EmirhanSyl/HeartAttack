@@ -450,7 +450,7 @@ PrefabInstance:
     - target: {fileID: 1746136711273453083, guid: 394158afd5215964589cfddd3ccdc907, type: 3}
       propertyPath: startPos
       value: 
-      objectReference: {fileID: 708124980}
+      objectReference: {fileID: 60838587}
     - target: {fileID: 1746136711273453089, guid: 394158afd5215964589cfddd3ccdc907, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -511,8 +511,9 @@ GameObject:
   m_Component:
   - component: {fileID: 426584592}
   - component: {fileID: 426584591}
+  - component: {fileID: 426584593}
   m_Layer: 0
-  m_Name: Half_0
+  m_Name: HalfKalp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,6 +584,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &426584593
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426584590}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53b81997a6e7a284893c8e92a290bdae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &433612930
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +847,7 @@ PrefabInstance:
     - target: {fileID: 1746136711273453083, guid: 394158afd5215964589cfddd3ccdc907, type: 3}
       propertyPath: startPos
       value: 
-      objectReference: {fileID: 708124980}
+      objectReference: {fileID: 433612931}
     - target: {fileID: 1746136711273453089, guid: 394158afd5215964589cfddd3ccdc907, type: 3}
       propertyPath: m_RootOrder
       value: 9
