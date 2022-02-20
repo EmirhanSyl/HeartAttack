@@ -7,8 +7,11 @@ public class Movement : MonoBehaviour
     public float health = 100f;
     public float lastHealth;
     public float speed = 5f;
+    [SerializeField]float Distace;
+    int direction;
 
     bool stopMovement;
+    public GameObject hero;
 
     Rigidbody2D rigHero;
     Animator animHero;
@@ -19,7 +22,8 @@ public class Movement : MonoBehaviour
         rigHero = GetComponent<Rigidbody2D>();
         animHero = GetComponent<Animator>();
         srHero = GetComponent<SpriteRenderer>();
-
+        hero = GameObject.FindGameObjectWithTag("Player");
+        
         lastHealth = health;
     }
 
@@ -27,8 +31,9 @@ public class Movement : MonoBehaviour
     {
         if(!stopMovement)
         {
-            //rigHero.velocity = new Vector2(speed * Input.GetAxis("Horizontal"), 0f);
+            rigHero.velocity = new Vector2(speed * direction, 0f);
         }
+        Distace = gameObject.transform.position.x - hero.transform.position.x;
 
     }
 
@@ -41,52 +46,12 @@ public class Movement : MonoBehaviour
             lastHealth = health;
 
         }
-        //if(Input.GetMouseButtonDown(0))
-        //{
-        //    health -= 5;
-        //}
+
         if (health <= 0)
         {
             animHero.SetTrigger("Dead");
             Destroy(gameObject, 2);
         }
-
-
-
-        //if (Input.GetAxis("Horizontal") >= 0.05f)
-        //{
-        //    srHero.flipX = false;
-        //    animHero.SetFloat("Speed", Input.GetAxis("Horizontal"));
-        //}
-        //else if (Input.GetAxis("Horizontal") <= 0.05f)
-        //{
-        //    srHero.flipX = true;
-        //    animHero.SetFloat("Speed", Input.GetAxis("Horizontal") * -1);
-        //}
-        //else
-        //{
-        //    animHero.SetFloat("Speed", 0f);
-        //}
-
-
-
-        //if(Input.GetKey(KeyCode.W))
-        //{
-        //    ShieldUp();
-        //    animHero.SetBool("ShieldUp", true);
-        //    stopMovement = true;
-        //}
-        //else if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Attack();
-        //    animHero.SetTrigger("Attack");
-        //    animHero.SetBool("ShieldUp", false);
-        //}
-        //else
-        //{
-        //    animHero.SetBool("ShieldUp", false);
-        //}
-
 
 
         if(animHero.GetBool("ShieldUp"))
@@ -98,6 +63,28 @@ public class Movement : MonoBehaviour
             stopMovement = false;
         }
         
+        if(Distace > 3 && Distace < 10 )
+        {
+            srHero.flipX = true;
+            direction = -1;
+            animHero.SetBool("Attack", false);
+        }        
+        else if(Distace < -3 && Distace > -10)
+        {
+            srHero.flipX = false;
+            direction = 1;
+            animHero.SetBool("Attack", false);
+        }
+        else if(Distace > -3 && Distace < 3)
+        {
+            animHero.SetBool("Attack", true);
+            direction = 0;            
+        }
+        else
+        {
+            animHero.SetBool("Attack", false);
+        }
+
     }
 
     void ShieldUp()
