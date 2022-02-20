@@ -44,6 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sabit Zemin
+    uniqueID: 1468330121
+    locked: 0
+  - name: Boss
+    uniqueID: 1836076633
+    locked: 0
   - name: Throwable
     uniqueID: 3812864421
     locked: 0
