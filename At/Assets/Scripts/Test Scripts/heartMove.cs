@@ -8,9 +8,7 @@ public class heartMove : MonoBehaviour
     Collider2D coll;
     Animator animKalp;
     
-    public Transform startPos;
-    public GameObject HalfKalp;
-    public GameObject hero;
+    GameObject hero;
 
     bool crash;
     float time;
@@ -22,6 +20,7 @@ public class heartMove : MonoBehaviour
 
     void Start()
     {
+        hero = GameObject.FindGameObjectWithTag("Player");
         rigKalp = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         animKalp = GetComponent<Animator>();
@@ -59,27 +58,30 @@ public class heartMove : MonoBehaviour
                 damage = Random.Range(2, 5);
                 collision.gameObject.GetComponent<Movement>().health -= damage;
 
-                Instantiate(HalfKalp, startPos.position, startPos.rotation);
-                hero.GetComponent<HeroMove>().health -= 1; 
-                Destroy(gameObject);
+                //Instantiate(HalfKalp, startPos.position, startPos.rotation);
+                hero.GetComponent<HeroMove>().health -= 1;
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
             }
             else if(lastSpeed > 4f && lastSpeed < 15f)
             {
                 damage = Random.Range(4, 15);
                 collision.gameObject.GetComponent<Movement>().health -= damage;
 
-                Instantiate(HalfKalp, startPos.position, startPos.rotation);
+                //Instantiate(HalfKalp, startPos.position, startPos.rotation);
                 hero.GetComponent<HeroMove>().health -= 1;
-                Destroy(gameObject);
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
             }
             else if(lastSpeed > 15f)
             {
                 damage = Random.Range(12, 20);
                 collision.gameObject.GetComponent<Movement>().health -= damage;
 
-                Instantiate(HalfKalp, startPos.position, startPos.rotation);
+                //Instantiate(HalfKalp, startPos.position, startPos.rotation);
                 hero.GetComponent<HeroMove>().health -= 1;
-                Destroy(gameObject);
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
             }
 
         }
