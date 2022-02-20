@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPos: {fileID: 0}
-  HalfKalp: {fileID: 0}
+  HalfKalp: {fileID: 5033098733314252295, guid: 7a85b7ed0fe65ab419a67b48e3c1939d, type: 3}
   hero: {fileID: 0}
   xForce: 20
   yForce: 200
