@@ -14,7 +14,7 @@ public class Button : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             StartCoroutine(duldul());
         }
