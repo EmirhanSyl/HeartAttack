@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class ExitButton : MonoBehaviour
 {
-    
+    public Button _button;
 
-    StartCoroutine(wait());
-
-    IEnumerator wait()
+    public void Start()
     {
-        yield return new WaitForSeconds(8f);
-        //Application.Quit();
-        //Debug.Log("Yess");
+        _button = GetComponent<Button>();
+        Invoke("interact", 7.0f);
+    }
+
+    public void interact()
+    {
+        _button.GetComponent<Button>().inter
     }
 
     public void doExitGame()
