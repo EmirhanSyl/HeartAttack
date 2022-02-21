@@ -17,6 +17,18 @@ public class hitDetecter : MonoBehaviour
             float damage = Random.Range(minDamage, maxDamage);
             collision.GetComponent<Movement>().health -= damage; 
         }
+        else if(collision.gameObject.CompareTag("Bat") || collision.gameObject.CompareTag("Ghost"))
+        {
+            hitted = true;
+            float damage = Random.Range(minDamage, maxDamage);
+            collision.GetComponent<BatMove>().health -= damage;
+        }
+        else if (collision.gameObject.CompareTag("Slime"))
+        {
+            hitted = true;
+            float damage = Random.Range(minDamage, maxDamage);
+            collision.GetComponent<Slime>().health -= damage;
+        }
         else
         {
             hitted = false;

@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Enemy
   - Kalp
+  - Bat
+  - Ghost
+  - Slime
   layers:
   - Default
   - TransparentFX

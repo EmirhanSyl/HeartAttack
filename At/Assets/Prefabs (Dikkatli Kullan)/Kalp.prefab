@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -482102875
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -6859750057227631434, guid: 4719cb7fb8f69554b9f358263b502f64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,6 +159,7 @@ MonoBehaviour:
   speedT: 1
   hero: {fileID: 0}
   kalpFree: 0
+  alive: 0
 --- !u!114 &1746136711273453083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +172,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079024bc3a904504cb0a8b223ca20e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPos: {fileID: 0}
-  HalfKalp: {fileID: 5033098733314252295, guid: 7a85b7ed0fe65ab419a67b48e3c1939d, type: 3}
-  hero: {fileID: 0}
   xForce: 20
   yForce: 200
