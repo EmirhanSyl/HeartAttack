@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     Rigidbody2D rigHero;
     Animator animHero;
     SpriteRenderer srHero;
-
+    [SerializeField] enemyGroundChecker checker; 
     void Start()
     {
         rigHero = GetComponent<Rigidbody2D>();
@@ -29,9 +29,13 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(!stopMovement)
+        if(!checker.stop)
         {
             rigHero.velocity = new Vector2(speed * direction, 0f);
+        }
+        else
+        {
+            animHero.SetFloat("Speed", 0);
         }
         Distace = gameObject.transform.position.x - hero.transform.position.x;
 
@@ -63,26 +67,33 @@ public class Movement : MonoBehaviour
             stopMovement = false;
         }
         
-        if(Distace > 3 && Distace < 10 )
+        if(Distace > 3 && Distace < 10)
         {
             srHero.flipX = true;
+            gameObject.transform.GetChild(0).localScale = new Vector3(-1, 1, 1);
             direction = -1;
             animHero.SetBool("Attack", false);
+            animHero.SetFloat("Speed", -direction);
         }        
         else if(Distace < -3 && Distace > -10)
         {
             srHero.flipX = false;
+            gameObject.transform.GetChild(0).localScale = new Vector3(1, 1, 1);
             direction = 1;
             animHero.SetBool("Attack", false);
+            animHero.SetFloat("Speed", direction);
         }
         else if(Distace > -3 && Distace < 3)
         {
             animHero.SetBool("Attack", true);
-            direction = 0;            
+            direction = 0;
+            animHero.SetFloat("Speed", direction);
         }
         else
         {
+            direction = 0;
             animHero.SetBool("Attack", false);
+            animHero.SetFloat("Speed", 0);
         }
 
     }

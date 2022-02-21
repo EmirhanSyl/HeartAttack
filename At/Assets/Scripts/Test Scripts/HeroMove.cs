@@ -9,8 +9,10 @@ public class HeroMove : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 50f;
 
+    float timer = 0;
     bool stopMovement;
     bool jump;
+    
 
     Rigidbody2D rigHero;
     Animator animHero;
@@ -19,6 +21,8 @@ public class HeroMove : MonoBehaviour
 
     public GameObject CheckObject;
     public GameObject hitDetecterObject;
+    public GameObject throwedSword;
+    public GameObject instantietedThrowedSword;
 
     [Header("HealthChangeState")]
     public GameObject fullKalp;
@@ -50,6 +54,8 @@ public class HeroMove : MonoBehaviour
     
     void Update()
     {
+        timer += Time.deltaTime;
+
         if (lastHealth != health)
         {
             ChangeHealthState();
@@ -96,6 +102,16 @@ public class HeroMove : MonoBehaviour
             animHero.SetBool("Jump", false);
         }
 
+        if(Input.GetKeyDown(KeyCode.F))
+        {          
+            if(timer > 10f)
+            {
+                instantietedThrowedSword = Instantiate(throwedSword, gameObject.transform.position, gameObject.transform.rotation);
+                StartCoroutine(ThrowAttack());
+                timer = 0;
+            }
+        }
+
     }
 
     IEnumerator Attack()
@@ -117,6 +133,22 @@ public class HeroMove : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         hitDetecterObject.SetActive(false);
+    }
+
+    IEnumerator ThrowAttack()
+    {
+        if(srHero.flipX)
+        {
+            instantietedThrowedSword.GetComponent<Rigidbody2D>().velocity = new Vector2(-15f, 0f);
+            instantietedThrowedSword.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            instantietedThrowedSword.GetComponent<Rigidbody2D>().velocity = new Vector2(15f, 0f);
+            instantietedThrowedSword.GetComponent<SpriteRenderer>().flipX = false;
+        }        
+        yield return new WaitForSeconds(4f);
+        Destroy(instantietedThrowedSword);
     }
 
     void ChangeHealthState()

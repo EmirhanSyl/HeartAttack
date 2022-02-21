@@ -5,8 +5,12 @@ using UnityEngine;
 public class enemyGroundChecker : MonoBehaviour
 {
     public bool stop;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         stop = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        stop = false;
     }
 }

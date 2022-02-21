@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class hitDetecter : MonoBehaviour
 {
-    public Animator HeroAnim;
+    //public Animator HeroAnim;
     public bool hitted;
+    [SerializeField] float minDamage = 5f;
+    [SerializeField] float maxDamage = 20;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy")) // && HeroAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack")
         {
             hitted = true;
-            float damage = Random.Range(5f, 20f);
+            float damage = Random.Range(minDamage, maxDamage);
             collision.GetComponent<Movement>().health -= damage; 
         }
         else
