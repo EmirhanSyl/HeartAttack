@@ -21,6 +21,9 @@ public class dragger : MonoBehaviour
     public bool kalpFree;
     public bool alive;
 
+    bool crash;
+    float lastSpeed;
+
 
     private void Start()
     {
@@ -35,6 +38,15 @@ public class dragger : MonoBehaviour
         }
 
     }
+
+    private void Update()
+    {
+        if (!crash)
+        {
+            lastSpeed = _rigidbody.velocity.magnitude;
+        }
+    }
+
     private void OnMouseDown()
     {
         startTime = Time.time;
@@ -42,7 +54,7 @@ public class dragger : MonoBehaviour
         shootStart = Input.mousePosition;
         //Debug.Log(shootStart);
         _rigidbody.gravityScale = 1;
-        coll.isTrigger = false;
+        coll.isTrigger = true;
 
         if (kalp)
         {
@@ -50,6 +62,7 @@ public class dragger : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("inHand", true);
             kalpFree = false;
             alive = true;
+            coll.isTrigger = false;
             //hero.GetComponent<HeroMove>().health -= 1;
         }
 
@@ -80,6 +93,32 @@ public class dragger : MonoBehaviour
             kalpFree = true;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ((collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Bat") || collision.gameObject.CompareTag("Ghost") || collision.gameObject.CompareTag("Slime")) && !kalp)
+        {
+            int damage = 0;
+            crash = true;
+            if (lastSpeed < 4f)
+            {
+                damage = Random.Range(2, 5);
+                collision.gameObject.GetComponent<Movement>().health -= damage;
+                Destroy(gameObject);
+            }
+            else if (lastSpeed > 4f && lastSpeed < 15f)
+            {
+                damage = Random.Range(4, 15);
+                collision.gameObject.GetComponent<Movement>().health -= damage;
+                Destroy(gameObject);
+            }
+            else if (lastSpeed > 15f)
+            {
+                damage = Random.Range(12, 20);
+                collision.gameObject.GetComponent<Movement>().health -= damage;
+                Destroy(gameObject);
+            }
 
+        }
+    }
 
 }

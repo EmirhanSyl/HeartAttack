@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeroMove : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class HeroMove : MonoBehaviour
     float timer = 0;
     bool stopMovement;
     bool jump;
+    public bool dead;
     
 
     Rigidbody2D rigHero;
@@ -151,6 +153,10 @@ public class HeroMove : MonoBehaviour
         Destroy(instantietedThrowedSword);
     }
 
+    void Respawn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     void ChangeHealthState()
     {
         switch(health)
@@ -338,10 +344,11 @@ public class HeroMove : MonoBehaviour
                 }
                 break;
             case 0:
-                //animHero.SetTrigger("Dead");
-                Destroy(gameObject, 2f);
+                dead = true;
+                animHero.SetTrigger("Dead");
+                Invoke("Respawn", 1.2f);
                 break;
         }
-    }
+    }    
 
 }
