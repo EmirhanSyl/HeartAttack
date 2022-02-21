@@ -15,7 +15,7 @@ public class ExitButton : MonoBehaviour
 
     public void interact()
     {
-        _button.GetComponent<Button>().inter
+        //_button.GetComponent<Button>().inter
     }
 
     public void doExitGame()
