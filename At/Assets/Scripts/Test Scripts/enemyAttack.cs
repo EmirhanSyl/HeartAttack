@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class enemyAttack : MonoBehaviour
 {
-    GameObject hero;
+    public GameObject hero;
     public float time = 0;
 
     private void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
+
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Kill : MonoBehaviour
 {
-    GameObject hero;
+    public GameObject hero;
     public Transform startPos;
 
     private void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
 
     }
 
@@ -29,6 +28,6 @@ public class Kill : MonoBehaviour
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
+    
 
 }

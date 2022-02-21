@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class CamCont : MonoBehaviour
 {
-    GameObject hero;
+    public GameObject hero;
     Vector2 camPos;
 
     void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     
     void Update()
     {
-        
+
     }
 
     private void LateUpdate()

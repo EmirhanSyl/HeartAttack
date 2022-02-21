@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BatMove : MonoBehaviour
 {
-    GameObject hero;
+    public GameObject hero;
     public float speed;
     public float health = 100;
     float lastHealth;
@@ -15,7 +15,6 @@ public class BatMove : MonoBehaviour
 
     void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
         _anim = GetComponent<Animator>();
         rigi = GetComponent<Rigidbody2D>();
         lastHealth = health;

@@ -8,7 +8,7 @@ public class heartMove : MonoBehaviour
     Collider2D coll;
     Animator animKalp;
     
-    GameObject hero;
+    public GameObject hero;
 
     bool crash;
     float time;
@@ -20,7 +20,6 @@ public class heartMove : MonoBehaviour
 
     void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
         rigKalp = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         animKalp = GetComponent<Animator>();

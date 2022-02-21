@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 17523257}
   - component: {fileID: 17523256}
   - component: {fileID: 17523255}
+  - component: {fileID: 17523259}
   m_Layer: 0
   m_Name: CastleTiles 1_12 (1)
   m_TagString: Untagged
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedV: 0
   speedT: 0
-  hero: {fileID: 0}
+  hero: {fileID: 1717798043}
   kalpFree: 0
   alive: 0
 --- !u!50 &17523256
@@ -317,6 +318,95 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &17523259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17523253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 0}
+  kalpFree: 0
+  alive: 0
+--- !u!1 &78041001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78041003}
+  - component: {fileID: 78041002}
+  - component: {fileID: 78041004}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &78041002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78041001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5300158841e8b824488a8a1ab599ea7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 1717798043}
+  butonluHero: {fileID: 1686191609}
+--- !u!4 &78041003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78041001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 118.92, y: -3.953, z: 0}
+  m_LocalScale: {x: 0.67172, y: 0.67172, z: 0.67172}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &78041004
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78041001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.49938866, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 3}
+    newSize: {x: 2, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0012227, y: 3}
+  m_EdgeRadius: 0
 --- !u!4 &111037186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1746136711273453089, guid: 394158afd5215964589cfddd3ccdc907, type: 3}
@@ -329,6 +419,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079172631}
     m_Modifications:
+    - target: {fileID: 1976134604, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 8761387965010890451, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -408,6 +502,7 @@ GameObject:
   - component: {fileID: 150430581}
   - component: {fileID: 150430580}
   - component: {fileID: 150430579}
+  - component: {fileID: 150430582}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (11)
   m_TagString: Untagged
@@ -527,6 +622,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &150430582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150430577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &157174833
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +651,7 @@ GameObject:
   - component: {fileID: 157174837}
   - component: {fileID: 157174836}
   - component: {fileID: 157174835}
+  - component: {fileID: 157174838}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (4)
   m_TagString: Untagged
@@ -658,6 +771,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &157174838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157174833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1001 &162246052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -717,6 +847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MantarPembe(Flip)
       objectReference: {fileID: 0}
+    - target: {fileID: 4351957396916145050, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
 --- !u!4 &162246053 stripped
@@ -795,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MantarPembe(Flip) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4351957396916145050, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
 --- !u!4 &179945363 stripped
@@ -819,6 +957,7 @@ GameObject:
   - component: {fileID: 273785424}
   - component: {fileID: 273785423}
   - component: {fileID: 273785422}
+  - component: {fileID: 273785425}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (12)
   m_TagString: Untagged
@@ -938,6 +1077,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &273785425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273785420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &294754060
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877b8e2b85c934d4aaf9f6448735258d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 1717798043}
   speed: 2
   health: 30
 --- !u!95 &294754063
@@ -1167,6 +1324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3675268839517230034, guid: cada57abe9595c341a58bd6c134724e0, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 3675268839517230044, guid: cada57abe9595c341a58bd6c134724e0, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1265,6 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877b8e2b85c934d4aaf9f6448735258d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 1717798043}
   speed: 2
   health: 30
 --- !u!95 &449859256
@@ -1386,6 +1548,7 @@ GameObject:
   - component: {fileID: 463260151}
   - component: {fileID: 463260150}
   - component: {fileID: 463260149}
+  - component: {fileID: 463260152}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (23)
   m_TagString: Untagged
@@ -1505,6 +1668,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &463260152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463260147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &468767699
 GameObject:
   m_ObjectHideFlags: 0
@@ -8134,6 +8314,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1976134604, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 8761387965010890451, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8182,7 +8366,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kaya_16
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2012347049382791516, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
 --- !u!1 &491722993
 GameObject:
@@ -8196,6 +8381,7 @@ GameObject:
   - component: {fileID: 491722997}
   - component: {fileID: 491722996}
   - component: {fileID: 491722995}
+  - component: {fileID: 491722998}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (10)
   m_TagString: Untagged
@@ -8315,6 +8501,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &491722998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491722993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &557867072
 GameObject:
   m_ObjectHideFlags: 0
@@ -8451,7 +8654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedV: 1
   speedT: 1
-  hero: {fileID: 0}
+  hero: {fileID: 1717798043}
   kalpFree: 0
   alive: 0
 --- !u!4 &568099603 stripped
@@ -8476,6 +8679,7 @@ GameObject:
   - component: {fileID: 589463420}
   - component: {fileID: 589463419}
   - component: {fileID: 589463418}
+  - component: {fileID: 589463421}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (7)
   m_TagString: Untagged
@@ -8595,6 +8799,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &589463421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589463416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &613119686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1208946593748508658, guid: 0011d8fd43b4f8a43be1f1e2fb45021e, type: 3}
@@ -8617,6 +8838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab558bbc74959604c8c9423db0170c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 1717798043}
 --- !u!1001 &661104516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8672,6 +8894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MantarPembe(Flip)
       objectReference: {fileID: 0}
+    - target: {fileID: 4351957396916145050, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
 --- !u!1 &677774241
@@ -8993,6 +9219,7 @@ GameObject:
   - component: {fileID: 774654990}
   - component: {fileID: 774654989}
   - component: {fileID: 774654988}
+  - component: {fileID: 774654991}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (6)
   m_TagString: Untagged
@@ -9112,6 +9339,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &774654991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774654986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &887321667
 GameObject:
   m_ObjectHideFlags: 0
@@ -9243,6 +9487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MantarPembe(Flip) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4351957396916145050, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
 --- !u!1 &954411123
@@ -9257,6 +9505,7 @@ GameObject:
   - component: {fileID: 954411127}
   - component: {fileID: 954411126}
   - component: {fileID: 954411125}
+  - component: {fileID: 954411128}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (18)
   m_TagString: Untagged
@@ -9376,6 +9625,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &954411128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954411123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &982089856
 GameObject:
   m_ObjectHideFlags: 0
@@ -9453,6 +9719,7 @@ GameObject:
   - component: {fileID: 999059706}
   - component: {fileID: 999059705}
   - component: {fileID: 999059704}
+  - component: {fileID: 999059707}
   m_Layer: 0
   m_Name: CastleTiles 1_11
   m_TagString: Untagged
@@ -9572,6 +9839,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &999059707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999059702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1016906711
 GameObject:
   m_ObjectHideFlags: 0
@@ -9584,6 +9868,7 @@ GameObject:
   - component: {fileID: 1016906715}
   - component: {fileID: 1016906714}
   - component: {fileID: 1016906713}
+  - component: {fileID: 1016906716}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (2)
   m_TagString: Untagged
@@ -9703,6 +9988,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1016906716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016906711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1074377882
 GameObject:
   m_ObjectHideFlags: 0
@@ -9807,6 +10109,7 @@ GameObject:
   - component: {fileID: 1165067783}
   - component: {fileID: 1165067782}
   - component: {fileID: 1165067781}
+  - component: {fileID: 1165067784}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (17)
   m_TagString: Untagged
@@ -9926,6 +10229,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1165067784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165067779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1001 &1178196646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9933,6 +10253,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079172631}
     m_Modifications:
+    - target: {fileID: 1590857449, guid: 9cf077957e45fa74ea335407467a9f2e, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 7084722540028920723, guid: 9cf077957e45fa74ea335407467a9f2e, type: 3}
       propertyPath: m_Mass
       value: 50
@@ -10015,6 +10339,7 @@ GameObject:
   - component: {fileID: 1217086977}
   - component: {fileID: 1217086976}
   - component: {fileID: 1217086975}
+  - component: {fileID: 1217086978}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (24)
   m_TagString: Untagged
@@ -10134,6 +10459,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1217086978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217086973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1221443285
 GameObject:
   m_ObjectHideFlags: 0
@@ -10146,6 +10488,7 @@ GameObject:
   - component: {fileID: 1221443289}
   - component: {fileID: 1221443288}
   - component: {fileID: 1221443287}
+  - component: {fileID: 1221443290}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (8)
   m_TagString: Untagged
@@ -10265,6 +10608,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1221443290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221443285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!4 &1232442697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3675268839517230044, guid: cada57abe9595c341a58bd6c134724e0, type: 3}
@@ -35796,6 +36156,7 @@ GameObject:
   - component: {fileID: 1379018038}
   - component: {fileID: 1379018037}
   - component: {fileID: 1379018039}
+  - component: {fileID: 1379018040}
   m_Layer: 0
   m_Name: CastleTiles 1_12
   m_TagString: Untagged
@@ -35929,6 +36290,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedV: 0
   speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
+--- !u!114 &1379018040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379018034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
   hero: {fileID: 0}
   kalpFree: 0
   alive: 0
@@ -36005,6 +36383,7 @@ GameObject:
   - component: {fileID: 1422973350}
   - component: {fileID: 1422973349}
   - component: {fileID: 1422973348}
+  - component: {fileID: 1422973351}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (20)
   m_TagString: Untagged
@@ -36124,6 +36503,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1422973351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422973346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1470306515
 GameObject:
   m_ObjectHideFlags: 0
@@ -36136,6 +36532,7 @@ GameObject:
   - component: {fileID: 1470306519}
   - component: {fileID: 1470306518}
   - component: {fileID: 1470306517}
+  - component: {fileID: 1470306520}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (15)
   m_TagString: Untagged
@@ -36255,6 +36652,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1470306520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470306515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1511619560
 GameObject:
   m_ObjectHideFlags: 0
@@ -36349,6 +36763,7 @@ GameObject:
   - component: {fileID: 1541070089}
   - component: {fileID: 1541070088}
   - component: {fileID: 1541070087}
+  - component: {fileID: 1541070090}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (9)
   m_TagString: Untagged
@@ -36468,6 +36883,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1541070090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541070085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1551049022
 GameObject:
   m_ObjectHideFlags: 0
@@ -36729,6 +37161,7 @@ GameObject:
   - component: {fileID: 1567211425}
   - component: {fileID: 1567211424}
   - component: {fileID: 1567211423}
+  - component: {fileID: 1567211426}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (19)
   m_TagString: Untagged
@@ -36848,6 +37281,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1567211426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567211421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1567727637
 GameObject:
   m_ObjectHideFlags: 0
@@ -36860,6 +37310,7 @@ GameObject:
   - component: {fileID: 1567727641}
   - component: {fileID: 1567727640}
   - component: {fileID: 1567727639}
+  - component: {fileID: 1567727642}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (5)
   m_TagString: Untagged
@@ -36979,6 +37430,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1567727642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567727637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1590857444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7084722540028920735, guid: 9cf077957e45fa74ea335407467a9f2e, type: 3}
@@ -37173,7 +37641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedV: 1
   speedT: 1
-  hero: {fileID: 0}
+  hero: {fileID: 1717798043}
   kalpFree: 0
   alive: 0
 --- !u!1001 &1629740943
@@ -37247,6 +37715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MantarPembe(Flip) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4351957396916145050, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
 --- !u!4 &1629740944 stripped
@@ -37417,6 +37889,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1717798043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8170505455823980259, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
+  m_PrefabInstance: {fileID: 8170505456439176593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1728855968
 GameObject:
   m_ObjectHideFlags: 0
@@ -37429,6 +37906,7 @@ GameObject:
   - component: {fileID: 1728855972}
   - component: {fileID: 1728855971}
   - component: {fileID: 1728855970}
+  - component: {fileID: 1728855973}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (1)
   m_TagString: Untagged
@@ -37548,6 +38026,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1728855973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728855968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1767614625
 GameObject:
   m_ObjectHideFlags: 0
@@ -37560,6 +38055,7 @@ GameObject:
   - component: {fileID: 1767614629}
   - component: {fileID: 1767614628}
   - component: {fileID: 1767614627}
+  - component: {fileID: 1767614630}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (16)
   m_TagString: Untagged
@@ -37679,6 +38175,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1767614630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767614625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1897980710
 GameObject:
   m_ObjectHideFlags: 0
@@ -37691,6 +38204,7 @@ GameObject:
   - component: {fileID: 1897980714}
   - component: {fileID: 1897980713}
   - component: {fileID: 1897980712}
+  - component: {fileID: 1897980715}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (13)
   m_TagString: Untagged
@@ -37810,6 +38324,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1897980715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897980710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1922506851
 GameObject:
   m_ObjectHideFlags: 0
@@ -37822,6 +38353,7 @@ GameObject:
   - component: {fileID: 1922506855}
   - component: {fileID: 1922506854}
   - component: {fileID: 1922506853}
+  - component: {fileID: 1922506856}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (3)
   m_TagString: Untagged
@@ -37941,6 +38473,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1922506856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922506851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!4 &1951748137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3992687943848720245, guid: 12f4aeba63f2f88449076aa1b9082671, type: 3}
@@ -37958,6 +38507,7 @@ GameObject:
   - component: {fileID: 1959630161}
   - component: {fileID: 1959630163}
   - component: {fileID: 1959630162}
+  - component: {fileID: 1959630164}
   m_Layer: 0
   m_Name: CastleTiles 1_7
   m_TagString: Untagged
@@ -38077,6 +38627,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1959630164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959630159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1972395864
 GameObject:
   m_ObjectHideFlags: 0
@@ -38089,6 +38656,7 @@ GameObject:
   - component: {fileID: 1972395868}
   - component: {fileID: 1972395867}
   - component: {fileID: 1972395866}
+  - component: {fileID: 1972395869}
   m_Layer: 0
   m_Name: CastleTiles 1_7 (1)
   m_TagString: Untagged
@@ -38208,6 +38776,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1972395869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972395864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!4 &1976134607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8761387965010890451, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
@@ -38225,6 +38810,7 @@ GameObject:
   - component: {fileID: 1992180961}
   - component: {fileID: 1992180960}
   - component: {fileID: 1992180959}
+  - component: {fileID: 1992180962}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (22)
   m_TagString: Untagged
@@ -38344,6 +38930,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1992180962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992180957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &1995098170
 GameObject:
   m_ObjectHideFlags: 0
@@ -38356,6 +38959,7 @@ GameObject:
   - component: {fileID: 1995098174}
   - component: {fileID: 1995098173}
   - component: {fileID: 1995098172}
+  - component: {fileID: 1995098175}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (21)
   m_TagString: Untagged
@@ -38475,6 +39079,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1995098175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995098170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1001 &2013960095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38482,6 +39103,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 576892731, guid: ef4de00b2d500014a84c1cec8f51d0ba, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 5995953290311548203, guid: ef4de00b2d500014a84c1cec8f51d0ba, type: 3}
       propertyPath: m_Name
       value: MantarPembe
@@ -38606,6 +39231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c965dafc92d5ebc4d910948250fdc08e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 1717798043}
   startPos: {fileID: 1074377883}
 --- !u!1 &2126880235
 GameObject:
@@ -38619,6 +39245,7 @@ GameObject:
   - component: {fileID: 2126880239}
   - component: {fileID: 2126880238}
   - component: {fileID: 2126880237}
+  - component: {fileID: 2126880240}
   m_Layer: 0
   m_Name: CastleTiles 1_11 (14)
   m_TagString: Untagged
@@ -38738,6 +39365,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2126880240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126880235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!1 &2131139828
 GameObject:
   m_ObjectHideFlags: 0
@@ -38750,6 +39394,7 @@ GameObject:
   - component: {fileID: 2131139832}
   - component: {fileID: 2131139831}
   - component: {fileID: 2131139830}
+  - component: {fileID: 2131139833}
   m_Layer: 0
   m_Name: CastleTiles 1_7 (2)
   m_TagString: Untagged
@@ -38869,6 +39514,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2131139833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131139828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b61ebe988561f42a6318519205f1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedV: 0
+  speedT: 0
+  hero: {fileID: 1717798043}
+  kalpFree: 0
+  alive: 0
 --- !u!4 &83940731636785182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3148039602545671075, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
@@ -39084,6 +39746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2352390959051798933, guid: e9d2f0499793fd341b046bc67ed26137, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 2352390959051798940, guid: e9d2f0499793fd341b046bc67ed26137, type: 3}
       propertyPath: m_Name
       value: HayaletKadin_0
@@ -39149,6 +39815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MantarPembe(Flip)
       objectReference: {fileID: 0}
+    - target: {fileID: 4351957396916145050, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b96831b97cdec449a5e6bf527f6ad7, type: 3}
 --- !u!1001 &3326367513586419664
@@ -39206,6 +39876,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3326367514308690196, guid: d53c13d55a245eb419f8ba5ccc470365, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d53c13d55a245eb419f8ba5ccc470365, type: 3}
 --- !u!1001 &3675268840700839573
@@ -39219,6 +39893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dal
       objectReference: {fileID: 0}
+    - target: {fileID: 3675268839517230034, guid: cada57abe9595c341a58bd6c134724e0, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 3675268839517230044, guid: cada57abe9595c341a58bd6c134724e0, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -39316,6 +39994,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3992687943848720246, guid: 12f4aeba63f2f88449076aa1b9082671, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 3992687943848720251, guid: 12f4aeba63f2f88449076aa1b9082671, type: 3}
       propertyPath: m_Name
       value: Bayrak
@@ -39377,6 +40059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kaya_32(Off_Trigger)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742596598199051055, guid: 928c3ff9f1aca994b9c63908fb2d0ceb, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 928c3ff9f1aca994b9c63908fb2d0ceb, type: 3}
 --- !u!1001 &5090670857784002056
@@ -39434,6 +40120,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5090670856774709012, guid: b503bcc04cea4c146837e6ae61e5a34d, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b503bcc04cea4c146837e6ae61e5a34d, type: 3}
 --- !u!1001 &5628093034489070947
@@ -39443,6 +40133,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079172631}
     m_Modifications:
+    - target: {fileID: 1468792276, guid: ed62ed4aa5c2e954b97ceada64f158b2, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 518785525045064265, guid: ed62ed4aa5c2e954b97ceada64f158b2, type: 3}
       propertyPath: m_Name
       value: Kalpcik
@@ -39505,6 +40199,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079172631}
     m_Modifications:
+    - target: {fileID: 576892731, guid: ef4de00b2d500014a84c1cec8f51d0ba, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 5995953290311548203, guid: ef4de00b2d500014a84c1cec8f51d0ba, type: 3}
       propertyPath: m_Name
       value: MantarPembe
@@ -39562,6 +40260,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079172631}
     m_Modifications:
+    - target: {fileID: 1590857449, guid: 9cf077957e45fa74ea335407467a9f2e, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 7084722540028920723, guid: 9cf077957e45fa74ea335407467a9f2e, type: 3}
       propertyPath: m_Mass
       value: 50
@@ -39645,7 +40347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170505455823980260, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.44
+      value: -31.14
       objectReference: {fileID: 0}
     - target: {fileID: 8170505455823980260, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39682,6 +40384,18 @@ PrefabInstance:
     - target: {fileID: 8170505455823980260, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170505455823980261, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
+      propertyPath: m_Size.x
+      value: 3.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170505455823980261, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
+      propertyPath: m_Size.y
+      value: 3.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170505455823980261, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8170505455823980265, guid: 1748057c22f819740a80efe7c1dc3956, type: 3}
       propertyPath: kalpHolder1
@@ -39752,6 +40466,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8472452931496553874, guid: a13e4d9c265dcab489e90ab5df1ae752, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a13e4d9c265dcab489e90ab5df1ae752, type: 3}
 --- !u!1001 &8761387965316474140
@@ -39761,6 +40479,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1079172631}
     m_Modifications:
+    - target: {fileID: 1976134604, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 1717798043}
     - target: {fileID: 8761387965010890451, guid: e9b7502d542050440b7b1aa2f489b311, type: 3}
       propertyPath: m_RootOrder
       value: 4

@@ -22,7 +22,6 @@ public class Movement : MonoBehaviour
         rigHero = GetComponent<Rigidbody2D>();
         animHero = GetComponent<Animator>();
         srHero = GetComponent<SpriteRenderer>();
-        hero = GameObject.FindGameObjectWithTag("Player");
         
         lastHealth = health;
     }

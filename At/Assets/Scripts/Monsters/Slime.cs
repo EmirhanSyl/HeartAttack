@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-    GameObject hero;
+    public GameObject hero;
     public float speed;
     public float health = 100;
     float lastHealth;
@@ -22,7 +22,6 @@ public class Slime : MonoBehaviour
 
     void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
         rigHero = GetComponent<Rigidbody2D>();
         animHero = GetComponent<Animator>();
         srHero = GetComponent<SpriteRenderer>();
